@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: wag-deployment
+spec:
+  template:
+    metadata:
+      name: wag-pod
+    spec:
+      containers:
+      - name: wag
+        image: wag
+        imagePullPolicy: Never
+      restartPolicy: Never
