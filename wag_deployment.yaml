@@ -1,14 +1,21 @@
 apiVersion: batch/v1
-kind: Job
+kind: Deployment
 metadata:
   name: wag-deployment
+  labels:
+    app: wagtail
 spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wagtail
   template:
     metadata:
-      name: wag-pod
+      labels:
+        app: wagtail
     spec:
       containers:
-      - name: wag
+      - name: wagtail
         image: wag
         imagePullPolicy: Never
       restartPolicy: Never
