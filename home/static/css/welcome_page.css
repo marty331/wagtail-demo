@@ -21,7 +21,7 @@ body {
 a {
     background-color: transparent;
     color: #308282;
-    text-decoration: underline;
+    text-decoration: None;
 }
 
 a:hover {
@@ -201,4 +201,19 @@ svg:not(:root) {
     .header-link {
         max-width: 100px;
     }
+}
+
+
+.nav-header {
+    display: grid;
+    grid-template-columns: 1fr 50em 1fr;
+    background-color: #231f20;
+    width: 100vw;
+}
+
+.nav-link a {
+    color: #e6e6e6;
+}
+.nav-link:hover  a {
+    color: #308282;
 }

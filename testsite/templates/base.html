@@ -1,4 +1,4 @@
-{% load static wagtailuserbar %}
+{% load static  %}
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -24,9 +24,16 @@
             {# Override this in templates to add extra stylesheets #}
         {% endblock %}
     </head>
-
+    <div class="nav-header">
+        <div></div>
+        <div>
+            <div><a class="nav-link" href="/">Home</a></div>
+            <div><a class="nav-link" href="/videos">Videos</a></div>
+        </div>
+        <div></div>
+    </div>
     <body class="{% block body_class %}{% endblock %}">
-        {% wagtailuserbar %}
+
 
         {% block content %}{% endblock %}
 
